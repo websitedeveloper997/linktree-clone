@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 const Generate = () => {
   const searchParams = useSearchParams();
-  const router = useRouter(); // ✅ ADD THIS
+  const router = useRouter(); 
 
   const [links, setLinks] = useState([{ link: "", linktext: "" }]);
   const [handle, sethandle] = useState(searchParams.get("handle") || "");
