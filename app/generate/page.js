@@ -86,7 +86,7 @@ const Generate = () => {
               className="w-full mb-6 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-pink-300 outline-none"
             />
 
-            {/* LINKS */}
+            
             <div className="space-y-4">
               {links.map((item, index) => (
                 <div key={index} className="bg-pink-50 p-5 rounded-2xl border">
