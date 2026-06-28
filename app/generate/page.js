@@ -4,6 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useSearchParams, useRouter } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 const Generate = () => {
   const searchParams = useSearchParams();
   const router = useRouter(); // ✅ ADD THIS
