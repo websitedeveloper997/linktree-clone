@@ -1,14 +1,13 @@
-"use client";
-import React, { useState } from "react";
+import { Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useState } from "react";
 
-export const dynamic = "force-dynamic";
-
-const Generate = () => {
+// ---------------- CHILD COMPONENT (Client Component) ----------------
+function GenerateContent() {
   const searchParams = useSearchParams();
-  const router = useRouter(); 
+  const router = useRouter();
 
   const [links, setLinks] = useState([{ link: "", linktext: "" }]);
   const [handle, sethandle] = useState(searchParams.get("handle") || "");
@@ -46,8 +45,6 @@ const Generate = () => {
 
     if (result.success) {
       toast.success(result.message);
-
-      // 🔥 IMPORTANT: redirect to created page
       setTimeout(() => {
         router.push(`/${handle}`);
       }, 500);
@@ -64,16 +61,12 @@ const Generate = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-pink-200 pt-44 px-4 flex justify-center">
-
         <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12">
-
           {/* LEFT CARD */}
           <div className="bg-white/70 backdrop-blur-xl shadow-2xl rounded-[30px] p-10 border border-white">
-
             <h1 className="text-4xl font-extrabold text-gray-900">
               Create Your BitTree
             </h1>
-
             <p className="text-gray-600 mt-2 mb-8">
               Add all your important links in one place.
             </p>
@@ -86,11 +79,9 @@ const Generate = () => {
               className="w-full mb-6 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-pink-300 outline-none"
             />
 
-            
             <div className="space-y-4">
               {links.map((item, index) => (
                 <div key={index} className="bg-pink-50 p-5 rounded-2xl border">
-
                   <input
                     value={item.linktext}
                     onChange={(e) =>
@@ -99,7 +90,6 @@ const Generate = () => {
                     placeholder="Link Title"
                     className="w-full mb-3 px-4 py-2 rounded-lg border"
                   />
-
                   <input
                     value={item.link}
                     onChange={(e) =>
@@ -108,7 +98,6 @@ const Generate = () => {
                     placeholder="https://example.com"
                     className="w-full px-4 py-2 rounded-lg border"
                   />
-
                 </div>
               ))}
             </div>
@@ -122,21 +111,18 @@ const Generate = () => {
 
             {/* PROFILE */}
             <div className="mt-8 space-y-4">
-
               <input
                 value={pic}
                 onChange={(e) => setpic(e.target.value)}
                 placeholder="Profile Image URL"
                 className="w-full px-5 py-3 border rounded-xl"
               />
-
               <input
                 value={desc}
                 onChange={(e) => setdesc(e.target.value)}
                 placeholder="Description"
                 className="w-full px-5 py-3 border rounded-xl"
               />
-
             </div>
 
             {/* BUTTON */}
@@ -147,29 +133,32 @@ const Generate = () => {
             >
               🚀 Create BitTree
             </button>
-
           </div>
 
           {/* RIGHT SIDE */}
           <div className="hidden lg:flex items-center justify-center relative">
-
             <div className="absolute w-80 h-80 bg-pink-300 blur-3xl opacity-40 rounded-full -top-10 -left-10"></div>
             <div className="absolute w-80 h-80 bg-purple-300 blur-3xl opacity-40 rounded-full bottom-0 right-0"></div>
-
             <img
               src="/generate.png"
               alt="preview"
               className="relative w-full max-w-md"
             />
-
           </div>
-
         </div>
-
         <ToastContainer position="top-center" />
       </div>
     </>
   );
-};
+}
 
-export default Generate;
+// ---------------- PARENT COMPONENT (Server Component) ----------------
+export const dynamic = "force-dynamic";
+
+export default function Generate() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <GenerateContent />
+    </Suspense>
+  );
+}
