@@ -1,5 +1,6 @@
 import Link from "next/link";
 import clientPromise from "@/lib/mongodb";
+export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 
 export default async function Page({ params }) {
