@@ -23,7 +23,7 @@ export default function Home() {
       <p className="text-yellow-300 text-[18px] my-4">Join 50M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.</p>
       <div className="input flex gap-2">
         <input value={text} onChange={(e)=> setText(e.target.value)} className="px-2 py-2 focus:outline-green-800 rounded-md" type="text" placeholder="Enter your Handle" />
-        <button onClick={()=> createTree()} className="bg-black rounded-full px-4 py-4 font-semibold">Claim your Bittree</button>
+        <button onClick={()=> createTree()} className="bg-gray-900 text-white rounded-full px-4 py-4 font-semibold">Claim your Bittree</button>
       </div>
     </div>
     <div className="flex items-left justify-center flex-col mr-[130px] mt-32 ">
