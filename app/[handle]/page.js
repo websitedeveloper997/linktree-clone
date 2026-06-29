@@ -13,10 +13,15 @@ export default async function Page({ params }) {
   const { handle } = params;
 
   try {
-    // ✅ API route ke through data fetch karo (build time par nahi chalega)
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/get?handle=${handle}`, {
-      cache: 'no-store' // dynamic render ke liye
-    });
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+    const res = await fetch(
+      `${baseUrl}/api/get?handle=${handle}`,
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!res.ok) {
       return notFound();
