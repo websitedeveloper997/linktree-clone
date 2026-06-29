@@ -72,10 +72,10 @@ function GenerateContent() {
         <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12">
           {/* LEFT CARD */}
           <div className="bg-[#262626] backdrop-blur-xl shadow-2xl rounded-[30px] p-10 border border-white">
-            <h1 className="text-4xl font-extrabold text-gray-900">
+            <h1 className="text-4xl font-extrabold text-white">
               Create Your BitTree
             </h1>
-            <p className="text-gray-600 mt-2 mb-8">
+            <p className="text-white mt-2 mb-8">
               Add all your important links in one place.
             </p>
 
