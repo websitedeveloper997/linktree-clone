@@ -121,7 +121,7 @@ export default async function Page({ params }) {
             className="w-32 h-32 rounded-full border-4 border-white shadow-2xl object-cover transition-all duration-500 hover:scale-110 hover:rotate-2"
           />
 
-          <span className="absolute -bottom-2 -right-2 bg-black text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+          <span className="absolute -bottom-2 -right-2 bg-white text-black text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
             LIVE
           </span>
         </div>
