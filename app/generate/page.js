@@ -71,7 +71,7 @@ function GenerateContent() {
       <div className="min-h-screen bg-gradient-to-br from-black via-black to-black pt-44 px-4 flex justify-center">
         <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12">
           {/* LEFT CARD */}
-          <div className="bg-white/70 backdrop-blur-xl shadow-2xl rounded-[30px] p-10 border border-white">
+          <div className="bg-[#262626] backdrop-blur-xl shadow-2xl rounded-[30px] p-10 border border-white">
             <h1 className="text-4xl font-extrabold text-gray-900">
               Create Your BitTree
             </h1>
