@@ -71,7 +71,7 @@ function GenerateContent() {
       <div className="min-h-screen bg-gradient-to-br from-black via-black to-black pt-44 px-4 flex justify-center">
         <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12">
           {/* LEFT CARD */}
-          <div className="bg-[#262626] backdrop-blur-xl shadow-2xl rounded-[30px] p-10 border border-white">
+          <div className="bg-[#262626] backdrop-blur-xl shadow-2xl rounded-[30px] p-10 border border-white/20">
             <h1 className="text-4xl font-extrabold text-white">
               Create Your BitTree
             </h1>
@@ -84,7 +84,7 @@ function GenerateContent() {
               value={handle}
               onChange={(e) => sethandle(e.target.value)}
               placeholder="your handle"
-              className="w-full mb-6 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-pink-300 outline-none"
+              className="w-full mb-6 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-black outline-none"
             />
 
             <div className="space-y-4">
