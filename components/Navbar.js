@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       {showNavbar && (
-        <nav className="bg-white w-[80vw] flex z-[9999] justify-between top-10 right-[10vw] rounded-full p-5 px-7 shadow-lg">
+        <nav className="bg-white w-[80vw] flex z-[9999] justify-between fixed top-10 right-[10vw] rounded-full p-5 px-7 shadow-lg">
 
           {/* LEFT SIDE */}
           <div className="logo flex gap-20 items-center">
