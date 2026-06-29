@@ -6,20 +6,17 @@ export const revalidate = 0;
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// ✅ MongoDB ko build time par LOAD hi nahi hone denge
-// Is liye import nahi kiya, direct fetch karenge API se
-
 export default async function Page({ params }) {
   const { handle } = params;
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      "https://linktree-clone-m4sk.vercel.app";
 
     const res = await fetch(
       `${baseUrl}/api/get?handle=${handle}`,
-      {
-        cache: "no-store",
-      }
+      { cache: "no-store" }
     );
 
     if (!res.ok) {
