@@ -49,6 +49,8 @@ function GenerateContent() {
     const r = await fetch("/api/add", requestOptions);
     const result = await r.json();
 
+    console.log(result); // ADD THIS
+
     if (result.success) {
       toast.success(result.message);
       setTimeout(() => {
