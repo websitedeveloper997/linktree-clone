@@ -6,6 +6,9 @@ export const revalidate = 0;
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+console.log("HANDLE:", handle);
+console.log("DATA:", data);
+
 export default async function Page({ params }) {
   const { handle } = params;
 
@@ -25,7 +28,8 @@ export default async function Page({ params }) {
 
     const item = await res.json();
 
-    if (!item) {
+    if (!item || Object.keys(item).length === 0) {
+      console.log("NO DATA FOUND");
       return notFound();
     }
 
