@@ -1,13 +1,19 @@
+
+"use client";
+
 import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 
+import Image from "next/image";
+
 // ---------------- CHILD COMPONENT (Client Component) ----------------
 function GenerateContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
+
 
   const [links, setLinks] = useState([{ link: "", linktext: "" }]);
   const [handle, sethandle] = useState(searchParams.get("handle") || "");
@@ -17,7 +23,7 @@ function GenerateContent() {
   const handleChange = (index, link, linktext) => {
     setLinks((initialLinks) =>
       initialLinks.map((item, i) =>
-        i == index ? { link, linktext } : item
+        i === index ? { link, linktext } : item
       )
     );
   };
@@ -40,7 +46,7 @@ function GenerateContent() {
       body: raw,
     };
 
-    const r = await fetch("http://localhost:3000/api/add", requestOptions);
+    const r = await fetch("/api/add", requestOptions);
     const result = await r.json();
 
     if (result.success) {
@@ -127,7 +133,7 @@ function GenerateContent() {
 
             {/* BUTTON */}
             <button
-              disabled={!pic || !handle || !links[0].linktext}
+              disabled={!pic || !handle || !links?.[0]?.linktext}
               onClick={submitLinks}
               className="mt-6 w-full py-4 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold disabled:opacity-50 hover:scale-[1.02] transition"
             >
@@ -151,9 +157,6 @@ function GenerateContent() {
     </>
   );
 }
-
-// ---------------- PARENT COMPONENT (Server Component) ----------------
-export const dynamic = "force-dynamic";
 
 export default function Generate() {
   return (
