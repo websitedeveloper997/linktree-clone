@@ -112,7 +112,7 @@ function GenerateContent() {
 
             <button
               onClick={addLink}
-              className="mt-5 px-6 py-3 bg-pink-500 text-white rounded-full font-semibold hover:scale-105 transition"
+              className="mt-5 px-6 py-3 bg-black text-white rounded-full font-semibold hover:scale-105 transition"
             >
               + Add Link
             </button>
@@ -137,7 +137,7 @@ function GenerateContent() {
             <button
               disabled={!pic || !handle || !links?.[0]?.linktext}
               onClick={submitLinks}
-              className="mt-6 w-full py-4 rounded-2xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold disabled:opacity-50 hover:scale-[1.02] transition"
+              className="mt-6 w-full py-4 rounded-2xl bg-gradient-to-r from-black to-black text-white font-bold disabled:opacity-50 hover:scale-[1.02] transition"
             >
               🚀 Create BitTree
             </button>
