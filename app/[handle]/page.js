@@ -175,7 +175,7 @@ export default async function Page({ params }) {
                     {linkItem.linktext}
                   </div>
 
-                  <div className="text-xs text-white mt-1">
+                  <div className="text-xs text-gray-500 mt-1">
                     Click to Visit →
                   </div>
                 </div>
@@ -196,8 +196,8 @@ export default async function Page({ params }) {
 
         {/* Footer */}
 
-        <div className="mt-10 text-base font-semibold text-black tracking-wide">
-          Powered by BitTree 🌳
+        <div className="mt-10 text-base font-semibold text-white tracking-wide">
+          Powered by BitTree!
         </div>
 
       </div>
