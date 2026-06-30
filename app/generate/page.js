@@ -123,13 +123,13 @@ function GenerateContent() {
                 value={pic}
                 onChange={(e) => setpic(e.target.value)}
                 placeholder="Profile Image URL"
-                className="w-full px-5 py-3 border rounded-xl focus:ring-black "
+                className="w-full px-5 py-3 border rounded-x"
               />
               <input
                 value={desc}
                 onChange={(e) => setdesc(e.target.value)}
                 placeholder="Description"
-                className="w-full px-5 py-3 border rounded-xl focus:ring-black "
+                className="w-full px-5 py-3 border rounded-xl"
               />
             </div>
 
