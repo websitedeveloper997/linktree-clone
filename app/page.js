@@ -46,7 +46,7 @@ export default function Home() {
               <input
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                className="px-4 py-3 rounded-md bg-gray-900 text-white border border-gray-700 focus:outline-none focus:border-white w-full sm:w-auto"
+                className="px-4 py-3 rounded-md bg-[#262626] text-white border border-white/20 focus:outline-none focus:border-white w-full sm:w-auto"
                 type="text"
                 placeholder="Enter your Handle"
               />
