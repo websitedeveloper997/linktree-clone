@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className="bg-black">
 
-      <div className="py-10 lg:py-20">
+      <div className="py-10 lg:py-0">
 
         <section className="bg-black min-h-[50vh] grid grid-cols-1 lg:grid-cols-2 items-center">
 
