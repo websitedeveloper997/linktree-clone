@@ -84,7 +84,7 @@ function GenerateContent() {
               value={handle}
               onChange={(e) => sethandle(e.target.value)}
               placeholder="your handle"
-              className="w-full mb-4 px-5 py-3 rounded-xl border focus:ring-1 focus:ring-black outline-none"
+              className="w-full mb-4 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-black outline-none"
             />
 
             <div className="space-y-4">
@@ -123,13 +123,13 @@ function GenerateContent() {
                 value={pic}
                 onChange={(e) => setpic(e.target.value)}
                 placeholder="Profile Image URL"
-                className="w-full px-5 py-3 border rounded-xl focus:ring-1 focus:ring-black "
+                className="w-full px-5 py-3 border rounded-xl focus:ring-black "
               />
               <input
                 value={desc}
                 onChange={(e) => setdesc(e.target.value)}
                 placeholder="Description"
-                className="w-full px-5 py-3 border rounded-xl focus:ring-1 focus:ring-black "
+                className="w-full px-5 py-3 border rounded-xl focus:ring-black "
               />
             </div>
 
