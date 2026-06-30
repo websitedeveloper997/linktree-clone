@@ -84,7 +84,7 @@ function GenerateContent() {
               value={handle}
               onChange={(e) => sethandle(e.target.value)}
               placeholder="your handle"
-              className="w-full mb-6 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-black outline-none"
+              className="w-full mb-5 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-black outline-none"
             />
 
             <div className="space-y-4">
