@@ -123,7 +123,7 @@ function GenerateContent() {
                 value={pic}
                 onChange={(e) => setpic(e.target.value)}
                 placeholder="Profile Image URL"
-                className="w-full px-5 py-3 border rounded-x"
+                className="w-full px-5 py-3 border rounded-xl"
               />
               <input
                 value={desc}
