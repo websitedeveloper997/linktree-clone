@@ -89,7 +89,7 @@ function GenerateContent() {
 
             <div className="space-y-4">
               {links.map((item, index) => (
-                <div key={index} className="bg-pink-50 p-5 rounded-2xl border">
+                <div key={index} className="bg-white p-5 rounded-2xl border">
                   <input
                     value={item.linktext}
                     onChange={(e) =>
