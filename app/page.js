@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="py-10 lg:py-20">
 
-        <section className="bg-black min-h-[100vh] grid grid-cols-1 lg:grid-cols-2 items-center">
+        <section className="bg-black min-h-[70vh] grid grid-cols-1 lg:grid-cols-2 items-center">
 
           {/* LEFT CONTENT */}
           <div className="flex flex-col justify-center px-6 lg:ml-[10vw] gap-4 mt-10 lg:mt-28">
