@@ -84,7 +84,7 @@ function GenerateContent() {
               value={handle}
               onChange={(e) => sethandle(e.target.value)}
               placeholder="your handle"
-              className="w-full mb-5 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-black outline-none"
+              className="w-full mb-7 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-black outline-none"
             />
 
             <div className="space-y-4">
@@ -145,12 +145,12 @@ function GenerateContent() {
 
           {/* RIGHT SIDE */}
           <div className="hidden lg:flex items-center justify-center relative">
-            <div className="absolute w-80 h-80 bg-pink-300 blur-3xl opacity-40 rounded-full -top-10 -left-10"></div>
-            <div className="absolute w-80 h-80 bg-purple-300 blur-3xl opacity-40 rounded-full bottom-0 right-0"></div>
+            <div className="absolute w-80 h-80 bg-white blur-3xl opacity-40 rounded-full -top-10 -left-10"></div>
+            <div className="absolute w-80 h-80 bg-white blur-3xl opacity-40 rounded-full bottom-0 right-0"></div>
             <img
               src="/generate.png"
               alt="preview"
-              className="relative w-full max-w-md"
+              className="relative w-full max-w-md rounded-[30px]"
             />
           </div>
         </div>
