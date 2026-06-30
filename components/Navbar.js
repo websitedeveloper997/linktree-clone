@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <>
       {showNavbar && (
-        <nav className="bg-black w-[92%] lg:w-[80vw] mx-auto mt-6 lg:mt-8 rounded-full shadow-lg px-4 lg:px-7 py-3 lg:py-5 flex items-center justify-between relative transition-all">
+        <nav className="bg-white w-[92%] lg:w-[80vw] mx-auto mt-6 lg:mt-8 rounded-full shadow-lg px-4 lg:px-7 py-3 lg:py-5 flex items-center justify-between relative transition-all">
 
           {/* LEFT - LOGO */}
           <div className="flex items-center">
