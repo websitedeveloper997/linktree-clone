@@ -84,7 +84,7 @@ function GenerateContent() {
               value={handle}
               onChange={(e) => sethandle(e.target.value)}
               placeholder="your handle"
-              className="w-full mb-4 px-5 py-3 rounded-xl border focus:ring-2 focus:ring-black outline-none"
+              className="w-full mb-4 px-5 py-3 rounded-xl border focus:ring-1 focus:ring-black outline-none"
             />
 
             <div className="space-y-4">
@@ -96,7 +96,7 @@ function GenerateContent() {
                       handleChange(index, item.link, e.target.value)
                     }
                     placeholder="Link Title"
-                    className="w-full mb-3 px-4 py-2 rounded-lg border focus:ring-2 focus:ring-black "
+                    className="w-full mb-3 px-4 py-2 rounded-lg border focus:ring-1 focus:ring-black "
                   />
                   <input
                     value={item.link}
@@ -104,7 +104,7 @@ function GenerateContent() {
                       handleChange(index, e.target.value, item.linktext)
                     }
                     placeholder="https://example.com"
-                    className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-black "
+                    className="w-full px-4 py-2 rounded-lg border focus:ring-1 focus:ring-black "
                   />
                 </div>
               ))}
@@ -123,13 +123,13 @@ function GenerateContent() {
                 value={pic}
                 onChange={(e) => setpic(e.target.value)}
                 placeholder="Profile Image URL"
-                className="w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-black "
+                className="w-full px-5 py-3 border rounded-xl focus:ring-1 focus:ring-black "
               />
               <input
                 value={desc}
                 onChange={(e) => setdesc(e.target.value)}
                 placeholder="Description"
-                className="w-full px-5 py-3 border rounded-xl focus:ring-2 focus:ring-black "
+                className="w-full px-5 py-3 border rounded-xl focus:ring-1 focus:ring-black "
               />
             </div>
 
