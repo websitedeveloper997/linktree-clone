@@ -69,7 +69,7 @@ function GenerateContent() {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-black via-black to-black pt-14 mb-14 px-4 flex justify-center">
-        <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12">
+        <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12 ml-5">
           {/* LEFT CARD */}
           <div className="bg-[#262626] backdrop-blur-xl shadow-2xl rounded-[30px] p-10 border border-white/20">
             <h1 className="text-4xl font-extrabold text-white">
