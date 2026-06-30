@@ -20,7 +20,7 @@ export default function Home() {
         <section className="bg-black min-h-[50vh] grid grid-cols-1 lg:grid-cols-2 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="flex flex-col justify-center px-6 lg:ml-[10vw] gap-4 mt-10 lg:mt-4">
+          <div className="flex flex-col justify-center px-6 lg:ml-[10vw] gap-4 mt-5 lg:mt-4">
 
             <p className="text-white font-bold text-3xl sm:text-4xl lg:text-5xl">
               Everything you
